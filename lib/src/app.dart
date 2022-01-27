@@ -12,25 +12,54 @@ class LinkShareApp extends StatelessWidget {
       title: "LinkShare",
       home: const HistoryHomepage(),
       theme: ThemeData.light().copyWith(
+        colorScheme: ThemeData.light().colorScheme.copyWith(
+              secondary: const Color(0xFF074EE8),
+            ),
         appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.white38,
+          backgroundColor: Colors.white,
           elevation: 0,
-          titleTextStyle: TextStyle(
-            color: Colors.black87,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
+          iconTheme: IconThemeData(
+            color: Color(0xFF444444),
           ),
           actionsIconTheme: IconThemeData(
-            color: Colors.black87,
+            color: Color(0xFF074EE8),
           ),
         ),
-        scaffoldBackgroundColor: Colors.white70,
+        scaffoldBackgroundColor: Colors.white,
         listTileTheme: ListTileThemeData(
-          tileColor: Colors.white,
+          tileColor: const Color(0xFFF6F6F6),
+          textColor: const Color(0xFF444444),
+          iconColor: const Color(0xFF444444),
+          horizontalTitleGap: 5,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(5),
           ),
           selectedColor: Colors.blueAccent,
+        ),
+        textTheme: const TextTheme(
+            headline5: TextStyle(
+              fontFamily: "Inter",
+              fontWeight: FontWeight.w700,
+              fontSize: 25,
+              color: Color(0xFF444444),
+            ),
+            headline6: TextStyle(
+              fontFamily: "Inter",
+              fontWeight: FontWeight.w600,
+              fontSize: 20,
+              color: Color(0xFF444444),
+            )),
+        floatingActionButtonTheme:
+            const FloatingActionButtonThemeData().copyWith(
+          extendedTextStyle: const TextStyle(
+            fontFamily: "Inter",
+            fontWeight: FontWeight.w600,
+            fontSize: 15,
+            color: Colors.white,
+          ),
+          enableFeedback: true,
+          extendedPadding: const EdgeInsets.symmetric(horizontal: 50),
+          backgroundColor: const Color(0xFF074EE8),
         ),
       ),
     );
