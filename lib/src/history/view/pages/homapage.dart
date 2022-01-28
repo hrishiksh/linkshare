@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../model/model.dart';
+import '../../../shared_component/shared_component.dart';
 
 class HistoryHomepage extends StatelessWidget {
   const HistoryHomepage({Key? key}) : super(key: key);
@@ -12,14 +13,11 @@ class HistoryHomepage extends StatelessWidget {
         child: ListView.separated(
           itemCount: linkData.length,
           itemBuilder: (_, index) {
-            return Padding(
-              padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
-              child: ListTile(
-                leading: const Icon(Icons.link_rounded),
-                title: Text(
-                  linkData[index]["link"],
-                  overflow: TextOverflow.ellipsis,
-                ),
+            return ListTile(
+              leading: const Icon(Icons.link_rounded),
+              title: Text(
+                linkData[index]["link"],
+                overflow: TextOverflow.ellipsis,
               ),
             );
           },
@@ -28,9 +26,9 @@ class HistoryHomepage extends StatelessWidget {
           },
         ),
       ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: (() => print("pressed")),
-        label: const Text("Create a new link"),
+      floatingActionButton: FloatingTextButton(
+        onPressed: () {},
+        label: "Create a new link",
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
