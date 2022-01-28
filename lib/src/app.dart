@@ -11,7 +11,7 @@ class LinkShareApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "LinkShare",
-      home: const QrGeneratorHomepage(),
+      home: const QrScannerHomepage(),
       theme: lightTheme,
     );
   }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../qr_generator.dart';
-import '../../../shared_component/text_button.dart';
+import '../../../shared_component/floating_text_button.dart';
 
 class QrGeneratorHomepage extends StatelessWidget {
   const QrGeneratorHomepage({Key? key}) : super(key: key);
