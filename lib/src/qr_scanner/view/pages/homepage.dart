@@ -59,12 +59,21 @@ class QrResultViewer extends StatelessWidget {
     return BlocBuilder<QrScanCubit, Map<String, dynamic>>(
       builder: (context, state) {
         return Container(
+          width: double.maxFinite,
+          padding: const EdgeInsets.symmetric(
+            vertical: 15,
+            horizontal: 15,
+          ),
+          decoration: BoxDecoration(
+            color: Theme.of(context).cardColor,
+            borderRadius: BorderRadius.circular(5),
+          ),
           child: state.isEmpty
               ? Text(
-                  "State is empty",
+                  "No Qr code visible",
                   style: Theme.of(context).textTheme.labelMedium,
                 )
-              : Text(
+              : SelectableText(
                   state["result"],
                   style: Theme.of(context).textTheme.labelMedium,
                 ),

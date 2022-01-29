@@ -11,10 +11,30 @@ ThemeData lightTheme = ThemeData.light().copyWith(
       color: Color(0xFF444444),
     ),
     actionsIconTheme: IconThemeData(
-      color: Color(0xFF074EE8),
+      color: Color(0xFF444444),
     ),
   ),
   scaffoldBackgroundColor: Colors.white,
+  cardColor: const Color(0xFFF6F6F6),
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: ButtonStyle(
+      backgroundColor: MaterialStateProperty.all(
+        const Color(0xFF074EE8),
+      ),
+      textStyle: MaterialStateProperty.all(
+        const TextStyle(
+          fontFamily: "Inter",
+          fontWeight: FontWeight.w600,
+          fontSize: 15,
+          color: Colors.white,
+        ),
+      ),
+      enableFeedback: true,
+      fixedSize: MaterialStateProperty.all(
+        const Size(double.maxFinite, 50),
+      ),
+    ),
+  ),
   listTileTheme: ListTileThemeData(
     tileColor: const Color(0xFFF6F6F6),
     textColor: const Color(0xFF444444),
@@ -66,12 +86,24 @@ ThemeData lightTheme = ThemeData.light().copyWith(
       fontSize: 20,
       color: Color(0xFF444444),
     ),
+    bodyText1: TextStyle(
+      fontFamily: "Inter",
+      fontWeight: FontWeight.w500,
+      fontSize: 15,
+      color: Color(0xFF818181),
+    ),
     // Used in text input
     labelMedium: TextStyle(
       fontFamily: "Inter",
       fontWeight: FontWeight.w500,
       fontSize: 15,
       color: Color(0xFF444444),
+    ),
+    button: TextStyle(
+      fontFamily: "Inter",
+      fontWeight: FontWeight.w600,
+      fontSize: 15,
+      color: Color(0xFF074EE8),
     ),
   ),
   floatingActionButtonTheme: const FloatingActionButtonThemeData().copyWith(
